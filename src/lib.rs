@@ -138,7 +138,8 @@ pub mod ic;
 #[derive(Debug)]
 pub enum Error<E> {
     /// I²C bus error
-    I2c(E),
+    #[allow(non_camel_case_types)]
+    I2C(E),
     /// Too much data passed for a write
     TooMuchData
 }
